@@ -63,7 +63,6 @@ export default {
 
 <template>
   <header>
-    <div class="container">
         <div>
             <img src="../assets/dc-logo.png" alt="image">
         </div>
@@ -73,38 +72,37 @@ export default {
                 <li class="li-nav" v-for="link in links" :class="{ active: link.active}"><a :href="link.url">{{ link.text }}</a></li>
             </ul>
         </div>   
-    </div>
   </header>
 </template>
 
 <style scoped lang="scss">
 @use "../style/partials/variables.scss" as *;
 
+
 header {
-    @include mixin.flex;
-    @include mixin.margin;
+    @include flex;
+    @include margin;
+    padding: 15px 0;
 }
-.container {
-    height: 150px;
+.li-nav {
     background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-weight: bold;
+    list-style: none;
 
     &:hover {
         color: #0C7CEC;
         border-bottom: 2px solid #0C7CEC;
     }
 }
+
 .li-nav a{
-    color: grey;
-    font-weight: bold;
     text-decoration: none;
+    color: grey;
 }
 
 ul {
     display: flex;
     gap: 20px;
-    list-style: none;
 }
+
 </style>

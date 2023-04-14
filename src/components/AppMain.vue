@@ -7,34 +7,32 @@ export default {
 <template>
   <main>
     <div class="container-main">
-      <div class="margin">
-        <i class="fa-solid fa-arrow-right"></i>
-      <span class="content">
-        <a href="">Content goes here</a>
-      </span>
+      <i class="fa-solid fa-arrow-right"></i>
+      <a href="" class="content">Content goes here</a>
       <i class="fa-solid fa-arrow-left-long"></i>
-      </div>
-      
     </div>
   </main>
 </template>
 
 <style scoped lang="scss">
-@use "../style/partials/variables.scss";
+@use "../style/partials/variables.scss" as *;
 
-.container-main {
-  height: 200px;
+main {
+  width: 100%;
+  height: 150px;
   background-color: #1C1C1C;
-  text-align: center;
-  display: flex;
-  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.container-main {
+  @include margin;
+  line-height: 140px;
   color: white;
 }
-.content a{
-  font-size: 1.4rem;
+.content {
   color: white;
-  font-weight: bold;
   text-decoration: none;
   padding: 5px;
 }
+
 </style>
