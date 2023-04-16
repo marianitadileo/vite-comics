@@ -1,6 +1,11 @@
 <script>
+import AppJumbo from './AppJumbo.vue';
+
 export default {
     name: "AppHeader",
+    components: {
+       AppJumbo
+    },
     data() {
         return {
             links: [
@@ -62,7 +67,7 @@ export default {
 </script>
 
 <template>
-  <header>
+    <header>
         <div>
             <img src="../assets/dc-logo.png" alt="image">
         </div>
@@ -71,8 +76,12 @@ export default {
             <ul>
                 <li class="li-nav" v-for="link in links" :class="{ active: link.active}"><a :href="link.url">{{ link.text }}</a></li>
             </ul>
-        </div>   
-  </header>
+        </div>  
+       
+    </header>
+    <main>
+        <AppJumbo />
+    </main>
 </template>
 
 <style scoped lang="scss">
@@ -82,7 +91,7 @@ export default {
 header {
     @include flex;
     @include margin;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 .li-nav {
     background-color: white;
