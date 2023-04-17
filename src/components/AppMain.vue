@@ -93,7 +93,7 @@ export default {
       
      <span class="label lbl-current">CURRENT SERIES</span>
       <div class="row-card">
-        <AppSeries v-for="(serie, index) in series" :key="index" :thumb="serie.thumb" :title="serie.series"/>
+        <AppSeries v-for="(serie, index) in series" :key="index" :thumb="serie.thumb" :serie="serie.series"/>
       </div>
       <button class="label">LOAD MORE</button>
     </div>
@@ -122,6 +122,10 @@ main {
   color: white;
 }
 
+button {
+  position: absolute;
+  left: 900px;
+}
 .label {
   background-color: #0C7CEC;
   color: white;

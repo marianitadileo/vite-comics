@@ -17,14 +17,16 @@ export default {
 
 <style scoped lang="scss">
     .card {
-        width: calc(100% / 6 - 10px);
-        margin: 5px;
+        width: calc(100% / 6 - 20px);
+        height: 100%;
+        margin: 10px;
         padding: 10px;
+        font-size: 1rem;
     }
 
     img {
        width: 100%;
-       
+       height: 200px; 
     }
 
     
